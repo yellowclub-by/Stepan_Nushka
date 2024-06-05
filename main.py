@@ -10,8 +10,11 @@ dp = Dispatcher()
 
 
 from handless.user_privat import user_router
+from handless.menu import menu_router
 from handless.user_group import group_router
+
 dp.include_router(user_router)
+dp.include_router(menu_router)
 dp.include_router(group_router)
 
 
