@@ -10,5 +10,5 @@ async def cleaner(message: types.Message):
     words_lst = message.text.split(' ')
     for word in words_lst:
         if word.lower() in ban_words:
-            await message.answer(f"{message.from_user.first_name} Щас забаню")
+            await message.answer(f"{message.from_user.first_name} Щас забаню🤬")
             await message.delete()
