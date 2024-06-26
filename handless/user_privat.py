@@ -43,7 +43,11 @@ async def about(message: types.Message):
 async def contacts(message: types.Message):
     await message.answer("""Спасибо, что выбрали нашу услугу по заказу пельменей и вареников! 
 Если у вас возникли вопросы, предложения или вы хотите оставить отзыв, мы будем рады вам помочь. 
-Наши контактные данные:""", reply_markup=reply.contacts_kb)
+Наши контактные данные:
+Номер для связи с доставщиком +375 55 586 67 74
+Номер для связи с владельцем +375 29 953 31 19
+Номер для связи с повором +375 85 965 45 83
+Номер для связи с админом +375 48 551 29 75""")
 
 
 
@@ -61,13 +65,9 @@ async def addresses_inline(callback: types.CallbackQuery):
     quopri = callback.data.split('_')[1]
     # await callback.message.delete()
     if quopri == '1':
-        await callback.message.answer("первый адрес🏠")
+        await callback.message.answer("https://www.google.com/maps/place/%D0%9F%D0%B5%D0%BB%D1%8C%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%231/@53.9172061,27.5230439,21z/data=!4m10!1m2!2m1!1z0L_QtdC70YzQvNC10L3QuA!3m6!1s0x46dbc5672b45639b:0xdcf97404f2ae069b!8m2!3d53.9171838!4d27.5231669!15sChDQv9C10LvRjNC80LXQvdC4WhIiENC_0LXQu9GM0LzQtdC90LiSARNkdW1wbGluZ19yZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVF3YjJKcVNVZG5FQUXgAQA!16s%2Fg%2F11bwm46cyh?hl=ru-RU&entry=ttu")
     elif quopri == '2':
-        await callback.message.answer("второй адрес🏥")
-    elif quopri == '3':
-        await  callback.message.answer("третий адрес🏚️")
-    elif quopri == '4':
-        await callback.message.answer("четвертый адрес🛏️")
+        await callback.message.answer("https://www.google.com/maps/place/%D0%92%D0%BA%D1%83%D1%81%D0%BD%D1%8B%D0%B5+%D0%BF%D0%B5%D0%BB%D1%8C%D0%BC%D0%B5%D0%BD%D0%B8/@53.9009834,27.5195671,21z/data=!4m10!1m2!2m1!1z0L_QtdC70YzQvNC10L3QuA!3m6!1s0x46dbc51c341dca79:0x4e6d36e0933594b7!8m2!3d53.9009533!4d27.5196967!15sChDQv9C10LvRjNC80LXQvdC4WhIiENC_0LXQu9GM0LzQtdC90LiSAQ1tZWFsX2RlbGl2ZXJ54AEA!16s%2Fg%2F11pvbfxbxc?hl=ru-RU&entry=ttu")
     await callback.answer()
 
 
